@@ -36,6 +36,7 @@ ___
 ## Establish a Baseline Performance
 
 * SVM Model (Original):
+
 ![SVM - Strategy Returns - Original](strategy_returns_original.PNG)
 ![SVM - Actual vs Strategy - Original](actualsvsstrategy.PNG)
 ![SVM - Classification Report - Original](svm_report_original.PNG)
@@ -45,6 +46,7 @@ The strategy returns from the SVM baseline trading algorithm performed well up u
 ## Tune the Baseline Trading Algorithm
 
 * SVM Model (Tune 1 - Adjust size of training dataset from 3 months to 6 months):
+
 ![SVM - Actual vs Strategy - Tune 1](actualsvsstrategy_tune1.PNG)
 ![SVM - Classification Report - Tune 1](svm_report_tune1.PNG)
 
@@ -53,6 +55,7 @@ What impact resulted from increasing or decreasing the training window?
 In tuning the SVM model, the size of the dataset was adjusted to 6 months from 3 months originally. Precision, recall, f1-score, and accuracy stayed roughly the same. The results were slightly worse for the tuned SVM model as even the strategy returns did not perform as well as the original model prior to mid-2016.  
 
 * SVM Model (Tune 2 - Adjust SMA long to 50):
+
 ![SVM - Actual vs Strategy - Tune 2](actualsvsstrategy_tune2.PNG)
 ![SVM - Classification Report - Tune 2](svm_report_tune2.PNG)
 
@@ -66,11 +69,11 @@ In tuning the SVM model, the SMA long window was adjusted to 50 days from 100 da
 ![Logistic Regression Model](lr_actualsvsstrategy.PNG)
 ![LR Classification Report](lr_report.PNG)
 
-### Summary Evaluation Report
+## Summary Evaluation Report
 
-    Did this new model perform better or worse than the provided baseline model? Did this new model perform better or worse than your tuned trading algorithm?
+Did this new model perform better or worse than the provided baseline model? Did this new model perform better or worse than your tuned trading algorithm?
 
-    The logistic regression model performed better than the original SVM baseline model and the tuned algorithms. Precision stayed roughly the same and accuracy dropped slightly. However, recall and f1 score for the -1.0 predictions improved drastically to .33 and .38, respectively. For the period 2016 to 2020 the logistic regression model behaved similarly to the SVM model. However, subsequent to 2020 the strategy returns were moving in line with the actual returns and did not diverge like the SVM models. The logistic regression model proved to be the better trading algorithm. 
+The logistic regression model performed better than the original SVM baseline model and the tuned algorithms. Precision stayed roughly the same and accuracy dropped slightly. However, recall and f1 score for the -1.0 predictions improved drastically to .33 and .38, respectively. For the period 2016 to 2020 the logistic regression model behaved similarly to the SVM model. However, subsequent to 2020 the strategy returns were moving in line with the actual returns and did not diverge like the SVM models. The logistic regression model proved to be the better trading algorithm. 
 
 
 ---
